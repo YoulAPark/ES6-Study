@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <h1>04_constructor.html</h1>
+    <button id="btn_test">버튼</button>
+
+    <script>        
+        function 기계() {
+            this.이름 = 'kim';
+        }
+        var 오브젝트 = new 기계();
+        console.log(오브젝트)
+
+        document.getElementById('btn_test').addEventListener('click', function(e){
+            var 어레이 = [1,2,3];
+            어레이.forEach(function(){
+                console.log(this)
+            });
+        });
+
+        var 오브젝트2 = {
+            이름들 : ['김', '이', '박'],
+            함수 : function(){
+                오브젝트2.이름들.forEach(()=> {
+                    console.log(this)
+                });
+            }
+        }
+        console.log(오브젝트2)
+        오브젝트2.함수();
+
+        var 책상 = {
+            사물 : ['모니터', '맥북', '마우스'],
+            함수 : function() {
+                책상.사물.forEach(()=>{
+                    console.log(this)
+                });
+            }
+        }
+        책상.함수();
+    </script>
+
+</body>
+</html>

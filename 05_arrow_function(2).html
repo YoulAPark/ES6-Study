@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    
+    <body>
+
+        <div class="container mt-4 my-5">
+            <h1>05_arrow_function(2).html</h1>
+        </div>
+
+        <div class="container mt-4 my-5">
+            <h2>1. 일반적인 함수 부르기</h2>
+            <p>var 함수 = function() {}</p>
+        </div>
+        
+        <div class="container mt-4 my-5">
+            <h2>2. arrow function 사용해보기</h2>
+            <p>var 함수 = () => {}</p>
+        </div>
+
+        <div class="container">
+            <h4>function의 기능</h4>
+            <div>
+                <p>1. 여러기능을 하는 코드를 한 변수로 묶고 싶을 때</p>
+                <p>2. 입출력기능 구현시</p>
+            </div>
+        </div>
+
+        
+
+        <script>   
+
+            // 1. function 함수() {}     
+            function 일반적인함수설정() {
+                console.log('그냥 function 어쩌구(){} 한다.')
+            }  
+            일반적인함수설정();
+
+            // 2. var 함수 = function() {}
+            var 펑션부르기 = function(){
+                console.log('펑션부르기의 콘솔창입니다.')
+            }            
+            펑션부르기();
+
+            // 3. arrow function 사용 (1)
+            var 함수 = () => {
+                console.log('arrow function으로 볼 수 있어서 깜짝놀랬지?')
+            }
+            함수();
+
+            // 4. function의 중요 기능 => 입출력구현
+            function 덧셈(x) {
+                return x + 2
+            }
+            console.log(덧셈(2));
+
+            var 뺄셈 = (x) => {
+                return x - 10
+            }
+            console.log(뺄셈(100));
+
+            var 세배곱하기 = (x) => {
+                return x * 3
+            }
+            console.log(세배곱하기(10));
+
+            var 십빼기 = x => { // 괄호 생략 가능
+                return x - 10
+            }
+            console.log(십빼기(30))
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    </body> 
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <h1>02_use_strict.html</h1>
+
+    <h4>'use strict' 란?</h4>
+    <p>
+        var 없이 변수를 선언하거나, 변수를 이상한 키워드로 선언할 때 오류를 발생시켜 실수를 방지해줌
+        함수 내에서 this를 부를 때 undefined라는 결과 값이 도출 된다.
+    </p>
+
+    <script>        
+        'use strict';
+
+        function strict_test() {
+            console.log(this)
+        }
+        strict_test();
+    </script>
+
+</body>
+</html>

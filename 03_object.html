@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <h1>03_object.html</h1>
+
+    <h4>'this'에 대하여</h4>
+    <p>1. 일반 함수 내에서 사용하면 window를 가리킨다</p>
+    <p>2. 오브젝트 내의 함수에서 사용하면 함수를 동작시키는 오브젝트가 출력된다.</p>
+
+    <script>     
+        var 오브젝트1 = {
+            data : 'kim',
+            오브젝트함수 : function(){
+                console.log('오브젝트함수')
+            },
+            오브젝트함수2 : function(){
+                console.log('ES6 연습하기')
+            },
+            this함수 : function() {
+                console.log(this)
+            }
+        }
+
+        오브젝트1.오브젝트함수();
+        오브젝트1.오브젝트함수2();
+        오브젝트1.this함수();
+
+        var 오브젝트2 = {
+            data : 'Park' ,
+            되려나 : function() {
+                console.log(this)
+            }
+        }
+
+        오브젝트2.되려나();
+    </script>
+
+</body>
+</html>
