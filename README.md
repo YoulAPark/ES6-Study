@@ -2,6 +2,11 @@
 
 ## ❓ Why do you study ES6?  
 최신 트렌드에 맞춰 ES6문법을 사용하며 JavaScript 코드를 요구하는 경향이 많아졌다.
+- 기간 : 2023.08.30 ~
+- OS : MacOS
+- IDE : Visual Studio Code
+- Language : HTML
+- 사용 라이브러리 : BootStrap 5.3.1
 
 ### 📖 ES6(ECAMA Script 6)
 ECAMA Script 표준의 가장 최신버전.  
