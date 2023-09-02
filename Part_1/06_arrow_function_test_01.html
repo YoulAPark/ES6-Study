@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+<body>
+
+    <div class="container mt-4 my-5">
+        <h4>제목을 입력하세요</h4>
+        <div>
+           내용을 입력하세요
+        </div>
+        <button id="btn" type="submit" class="btn btn-light">버튼</button>
+    </div>
+
+    <script>    
+        /* 사람.sayHi()라고 작성시 '안녕 나는 손흥민' 이 콘솔창에 출력되도록. sayHi()함수를 어디서 만들어야할까요*/
+        var 사람 = {
+            name : '손흥민',
+            
+            /* 1. 사람.name 출력 */
+            sayHi1() {
+                console.log('1. 안녕 나는 '+사람.name);
+            },
+
+            /* 2. this.name 출력 */
+            sayHi2 : function() {
+                console.log('2. 안녕 나는 '+this.name);
+            },
+
+            /* 3. arrow function과 사람.name 출력 */
+            sayHi3 : () => {
+                console.log('3. 안녕 나는 '+사람.name)
+            },
+
+            /* 4. array function과 this는 같이 사용 못한다. */
+            sayHi4 : () => {
+                console.log('4. 안녕 나는 '+this.name)
+            }
+        }
+        사람.sayHi1();
+        사람.sayHi2();
+        사람.sayHi3();
+        사람.sayHi4();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body> 
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+<body>
+
+    <div class="container mt-4 my-5">
+        <h4>제목을 입력하세요</h4>
+        <div>
+           내용을 입력하세요
+        </div>
+        <button id="btn" type="submit" class="btn btn-light">버튼</button>
+    </div>
+
+    <script>  
+        /* 함수를 따로 만들어 자료.data의 숫자들을 모두 더하기 */  
+        var 자료 = {
+            data : [1,2,3,4,5]
+        }
+        자료.전부더하기 = () => { // arrow function을 사용함
+            var x = 0;
+            자료.data.forEach((a)=>{
+                x = x + a;
+            });
+            console.log(x);
+        }
+        자료.전부더하기();
+
+        /* 생일을 모두 더하기 */
+        var 생일더하기 = {
+            data : [9,3,0,5,1,1]
+        }
+        생일더하기.전부더하기 = function() { // this를 사용했기 때문에 arrow function 사용시 비출력
+            var 합계 = 0;
+            this.data.forEach((a)=> {
+                합계 = 합계 + a;
+            })
+            console.log(합계)
+        }
+        생일더하기.전부더하기();
+
+        // [에러주의] arrow function과 this의 관계
+        생일더하기.전부더하기2 = () => { // this를 사용했기 때문에 arrow function 사용시 비출력
+            var 합계 = 0;
+            this.data.forEach((a)=> {
+                합계 = 합계 + a;
+            })
+            console.log(합계)
+        }
+        생일더하기.전부더하기2();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body> 
+</html>
